@@ -5,10 +5,10 @@
 #include "../lib/Snake.h"
 
 int main() {
-    const int screenWidth = 750;
+    const int screenWidth = 600;
     const int screenHeight = 600;
 
-    InitWindow(screenWidth, screenHeight, "Attack");
+    InitWindow(screenWidth, screenHeight, "˚｡⋆Snake⋆｡˚");
     SetTargetFPS(60);
 
     Snake snake;
@@ -16,7 +16,12 @@ int main() {
     while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(RAYWHITE);
+        
+        // DrawText("Money: " + snake.getMoney(), 190, 200, 20, LIGHTGRAY);
+
         snake.Draw();
+
+        snake.FoodGeneration();
 
         snake.UpdateSnake();
         snake.SnakeDraw();

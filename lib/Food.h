@@ -6,12 +6,18 @@
 
 class Food : public Background {
     private:
-        float calories;
+        int foodRow;
+        int foodCol;
+
+        // float calories;
     public:
 
         Food();
         ~Food();
-        float getCalories();
-        // void SnakeEatFood(int colorFood);
+
+        int getFoodRow();
+        int getFoodCol();
+
+        // float getCalories();
         void FoodGeneration();
 };

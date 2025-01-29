@@ -3,13 +3,15 @@
 #include "../../lib/Food.h"
 
 Food::Food(){
-    this->calories = 0.0f;
+    this->foodRow = 0;
+    this->foodCol = 0;
+    // this->calories = 0.0f;
 }
 Food::~Food(){  }
 
-float Food::getCalories(){
-    return this->calories;
-}
+// float Food::getCalories(){
+//     return this->calories;
+// }
 
 void Food::FoodGeneration() {
     std::random_device rd;
@@ -28,6 +30,16 @@ void Food::FoodGeneration() {
     int random = rand(generator);
 
     grid[randomRow][randomCol] = random;
+
+        this->foodRow = randomRow;
+        this->foodCol = randomCol;
+}
+
+int Food::getFoodRow(){
+    return this->foodRow;
+}
+int Food::getFoodCol(){
+    return this->foodCol;
 }
 
 // void Food::SnakeEatFood(int colorFood){

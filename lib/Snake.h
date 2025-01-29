@@ -32,12 +32,14 @@ class Snake : public Food {
         ~Snake();
 
         void setMoney();
+        int getMoney();
         void snakeGrowth();
 
         void SnakeDraw();
         void SnakeClear();
 
         void UpdateSnake();
-        void SnakeEatFood(int colorFood);
+        void SnakeEatFood();
+        int getCalories();
         // void FoodGeneration();
 };
