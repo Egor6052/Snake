@@ -1,16 +1,26 @@
 #include <iostream>
+#include <random>
 #include "../../lib/Background.h"
-
+// #include "../../lib/Snake.h"
 
 Background::Background(){
     this->numRows = 20;
-    this->numCols = 25;
+    this->numCols = 20;
     this->cellSize = 30;
     Initialize();
 
     colors = GetCellColors();
 }
 Background::~Background(){}
+
+int Background::getNumRows(){
+    return this->numRows;
+}
+
+int Background::getNumCols(){
+    return this->numCols;
+}
+
 
 void Background::Print(){
     for (int row = 0; row < numRows; row ++){
@@ -24,13 +34,13 @@ void Background::Print(){
 
 void Background::Initialize(){
     for (int row = 0; row < numRows; row ++){
-
+        
         for (int column = 0; column < numCols; column ++){
             grid[row][column] = 0;
         }
     }
+    // Snake::FoodGeneration();
 }
-
 
 std::vector<Color> Background::GetCellColors() {
     Color darkGray = {26, 31, 40, 255};
@@ -45,7 +55,7 @@ std::vector<Color> Background::GetCellColors() {
     return {darkGray, green, red, orange, yellow, purple, cyan, blue};
 }
 
-void Background::Drow(){
+void Background::Draw(){
     for (int row = 0; row < numRows; row ++){
         for (int column = 0; column < numCols; column ++){
             int cellValue = grid[row][column];
@@ -54,5 +64,3 @@ void Background::Drow(){
         }
     }
 }
-
-

@@ -8,8 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/admin1/Стільниця/Game2/src/Background/Background.cpp" "CMakeFiles/start.dir/src/Background/Background.cpp.o" "gcc" "CMakeFiles/start.dir/src/Background/Background.cpp.o.d"
-  "/home/admin1/Стільниця/Game2/src/main.cpp" "CMakeFiles/start.dir/src/main.cpp.o" "gcc" "CMakeFiles/start.dir/src/main.cpp.o.d"
+  "/home/admin1/Стільниця/Snake/src/Background/Background.cpp" "CMakeFiles/start.dir/src/Background/Background.cpp.o" "gcc" "CMakeFiles/start.dir/src/Background/Background.cpp.o.d"
+  "/home/admin1/Стільниця/Snake/src/Food/Food.cpp" "CMakeFiles/start.dir/src/Food/Food.cpp.o" "gcc" "CMakeFiles/start.dir/src/Food/Food.cpp.o.d"
+  "/home/admin1/Стільниця/Snake/src/Snake/Snake.cpp" "CMakeFiles/start.dir/src/Snake/Snake.cpp.o" "gcc" "CMakeFiles/start.dir/src/Snake/Snake.cpp.o.d"
+  "/home/admin1/Стільниця/Snake/src/main.cpp" "CMakeFiles/start.dir/src/main.cpp.o" "gcc" "CMakeFiles/start.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -17,33 +17,15 @@ find_package(raylib REQUIRED)
 # Шлях до вихідних файлів
 set(SOURCE_FILES
     ./src/Background/Background.cpp
-    # ./src/User/CreatePostgresUser.cpp
-    # ./src/User/UserDB.cpp
-    
-    # ./src/Server/Server.cpp
-
-    # ./src/DB/Database.cpp
-    # ./src/DB/DateTime.cpp
-    # ./src/DB/CreateTable.cpp
-    # ./src/DB/CreateBackup.cpp
-
-    # ./src/dao/entity/ActivePower.cpp
-    # ./src/dao/entity/Current.cpp
-    # ./src/dao/entity/IpAddress.cpp
-    # ./src/dao/entity/NameSensor.cpp
-    # ./src/dao/entity/PowerFactor.cpp
-    # ./src/dao/entity/ReactivePower.cpp
-    # ./src/dao/entity/Voltage.cpp
-    
-    # ./src/dao/entity/roundNumber.cpp
+    ./src/Food/Food.cpp
+    ./src/Snake/Snake.cpp
 )
 
 # Заголовкові файли
 set(HEADER_FILES
     ./lib/Background.h
-    # ./lib/Database.h
-    # ./lib/Server.h
-    # ./lib/UserDB.h
+    ./lib/Food.h
+    ./lib/Snake.h
 )
 
 # Додавання виконуваного файлу

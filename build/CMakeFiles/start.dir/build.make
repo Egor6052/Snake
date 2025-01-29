@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin1/Стільниця/Game2
+CMAKE_SOURCE_DIR = /home/admin1/Стільниця/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin1/Стільниця/Game2/build
+CMAKE_BINARY_DIR = /home/admin1/Стільниця/Snake/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/start.dir/depend.make
@@ -70,47 +70,79 @@ include CMakeFiles/start.dir/progress.make
 include CMakeFiles/start.dir/flags.make
 
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Game2/src/main.cpp
+CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Snake/src/main.cpp
 CMakeFiles/start.dir/src/main.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Game2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/main.cpp.o -MF CMakeFiles/start.dir/src/main.cpp.o.d -o CMakeFiles/start.dir/src/main.cpp.o -c /home/admin1/Стільниця/Game2/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/start.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/main.cpp.o -MF CMakeFiles/start.dir/src/main.cpp.o.d -o CMakeFiles/start.dir/src/main.cpp.o -c /home/admin1/Стільниця/Snake/src/main.cpp
 
 CMakeFiles/start.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Game2/src/main.cpp > CMakeFiles/start.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Snake/src/main.cpp > CMakeFiles/start.dir/src/main.cpp.i
 
 CMakeFiles/start.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Game2/src/main.cpp -o CMakeFiles/start.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Snake/src/main.cpp -o CMakeFiles/start.dir/src/main.cpp.s
 
 CMakeFiles/start.dir/src/Background/Background.cpp.o: CMakeFiles/start.dir/flags.make
-CMakeFiles/start.dir/src/Background/Background.cpp.o: /home/admin1/Стільниця/Game2/src/Background/Background.cpp
+CMakeFiles/start.dir/src/Background/Background.cpp.o: /home/admin1/Стільниця/Snake/src/Background/Background.cpp
 CMakeFiles/start.dir/src/Background/Background.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Game2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/src/Background/Background.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Background/Background.cpp.o -MF CMakeFiles/start.dir/src/Background/Background.cpp.o.d -o CMakeFiles/start.dir/src/Background/Background.cpp.o -c /home/admin1/Стільниця/Game2/src/Background/Background.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/start.dir/src/Background/Background.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Background/Background.cpp.o -MF CMakeFiles/start.dir/src/Background/Background.cpp.o.d -o CMakeFiles/start.dir/src/Background/Background.cpp.o -c /home/admin1/Стільниця/Snake/src/Background/Background.cpp
 
 CMakeFiles/start.dir/src/Background/Background.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Background/Background.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Game2/src/Background/Background.cpp > CMakeFiles/start.dir/src/Background/Background.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Snake/src/Background/Background.cpp > CMakeFiles/start.dir/src/Background/Background.cpp.i
 
 CMakeFiles/start.dir/src/Background/Background.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Background/Background.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Game2/src/Background/Background.cpp -o CMakeFiles/start.dir/src/Background/Background.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Snake/src/Background/Background.cpp -o CMakeFiles/start.dir/src/Background/Background.cpp.s
+
+CMakeFiles/start.dir/src/Food/Food.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Food/Food.cpp.o: /home/admin1/Стільниця/Snake/src/Food/Food.cpp
+CMakeFiles/start.dir/src/Food/Food.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/start.dir/src/Food/Food.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Food/Food.cpp.o -MF CMakeFiles/start.dir/src/Food/Food.cpp.o.d -o CMakeFiles/start.dir/src/Food/Food.cpp.o -c /home/admin1/Стільниця/Snake/src/Food/Food.cpp
+
+CMakeFiles/start.dir/src/Food/Food.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Food/Food.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Snake/src/Food/Food.cpp > CMakeFiles/start.dir/src/Food/Food.cpp.i
+
+CMakeFiles/start.dir/src/Food/Food.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Food/Food.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Snake/src/Food/Food.cpp -o CMakeFiles/start.dir/src/Food/Food.cpp.s
+
+CMakeFiles/start.dir/src/Snake/Snake.cpp.o: CMakeFiles/start.dir/flags.make
+CMakeFiles/start.dir/src/Snake/Snake.cpp.o: /home/admin1/Стільниця/Snake/src/Snake/Snake.cpp
+CMakeFiles/start.dir/src/Snake/Snake.cpp.o: CMakeFiles/start.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin1/Стільниця/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/start.dir/src/Snake/Snake.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/start.dir/src/Snake/Snake.cpp.o -MF CMakeFiles/start.dir/src/Snake/Snake.cpp.o.d -o CMakeFiles/start.dir/src/Snake/Snake.cpp.o -c /home/admin1/Стільниця/Snake/src/Snake/Snake.cpp
+
+CMakeFiles/start.dir/src/Snake/Snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/start.dir/src/Snake/Snake.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin1/Стільниця/Snake/src/Snake/Snake.cpp > CMakeFiles/start.dir/src/Snake/Snake.cpp.i
+
+CMakeFiles/start.dir/src/Snake/Snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/start.dir/src/Snake/Snake.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin1/Стільниця/Snake/src/Snake/Snake.cpp -o CMakeFiles/start.dir/src/Snake/Snake.cpp.s
 
 # Object files for target start
 start_OBJECTS = \
 "CMakeFiles/start.dir/src/main.cpp.o" \
-"CMakeFiles/start.dir/src/Background/Background.cpp.o"
+"CMakeFiles/start.dir/src/Background/Background.cpp.o" \
+"CMakeFiles/start.dir/src/Food/Food.cpp.o" \
+"CMakeFiles/start.dir/src/Snake/Snake.cpp.o"
 
 # External object files for target start
 start_EXTERNAL_OBJECTS =
 
 start: CMakeFiles/start.dir/src/main.cpp.o
 start: CMakeFiles/start.dir/src/Background/Background.cpp.o
+start: CMakeFiles/start.dir/src/Food/Food.cpp.o
+start: CMakeFiles/start.dir/src/Snake/Snake.cpp.o
 start: CMakeFiles/start.dir/build.make
 start: /usr/lib64/libraylib.so
 start: CMakeFiles/start.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin1/Стільниця/Game2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable start"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin1/Стільниця/Snake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable start"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/start.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -122,6 +154,6 @@ CMakeFiles/start.dir/clean:
 .PHONY : CMakeFiles/start.dir/clean
 
 CMakeFiles/start.dir/depend:
-	cd /home/admin1/Стільниця/Game2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin1/Стільниця/Game2 /home/admin1/Стільниця/Game2 /home/admin1/Стільниця/Game2/build /home/admin1/Стільниця/Game2/build /home/admin1/Стільниця/Game2/build/CMakeFiles/start.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/admin1/Стільниця/Snake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin1/Стільниця/Snake /home/admin1/Стільниця/Snake /home/admin1/Стільниця/Snake/build /home/admin1/Стільниця/Snake/build /home/admin1/Стільниця/Snake/build/CMakeFiles/start.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/start.dir/depend
 

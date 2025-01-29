@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/admin1/Стільниця/Game2/./lib
+CXX_INCLUDES = -I/home/admin1/Стільниця/Snake/./lib
 
 CXX_FLAGS = -Wall -fPIC -I/usr/include
 

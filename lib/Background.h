@@ -17,9 +17,11 @@ class Background {
         Background();
         ~Background();
 
+        int getNumRows();
+        int getNumCols();
+
         void Initialize();
         void Print();
 
-        void Drow();
-
+        void Draw();
 };

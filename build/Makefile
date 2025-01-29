@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin1/Стільниця/Game2
+CMAKE_SOURCE_DIR = /home/admin1/Стільниця/Snake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin1/Стільниця/Game2/build
+CMAKE_BINARY_DIR = /home/admin1/Стільниця/Snake/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/Game2/build/CMakeFiles /home/admin1/Стільниця/Game2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/Snake/build/CMakeFiles /home/admin1/Стільниця/Snake/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/Game2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin1/Стільниця/Snake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,54 @@ src/Background/Background.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Background/Background.cpp.s
 .PHONY : src/Background/Background.cpp.s
 
+src/Food/Food.o: src/Food/Food.cpp.o
+.PHONY : src/Food/Food.o
+
+# target to build an object file
+src/Food/Food.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Food/Food.cpp.o
+.PHONY : src/Food/Food.cpp.o
+
+src/Food/Food.i: src/Food/Food.cpp.i
+.PHONY : src/Food/Food.i
+
+# target to preprocess a source file
+src/Food/Food.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Food/Food.cpp.i
+.PHONY : src/Food/Food.cpp.i
+
+src/Food/Food.s: src/Food/Food.cpp.s
+.PHONY : src/Food/Food.s
+
+# target to generate assembly for a file
+src/Food/Food.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Food/Food.cpp.s
+.PHONY : src/Food/Food.cpp.s
+
+src/Snake/Snake.o: src/Snake/Snake.cpp.o
+.PHONY : src/Snake/Snake.o
+
+# target to build an object file
+src/Snake/Snake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Snake/Snake.cpp.o
+.PHONY : src/Snake/Snake.cpp.o
+
+src/Snake/Snake.i: src/Snake/Snake.cpp.i
+.PHONY : src/Snake/Snake.i
+
+# target to preprocess a source file
+src/Snake/Snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Snake/Snake.cpp.i
+.PHONY : src/Snake/Snake.cpp.i
+
+src/Snake/Snake.s: src/Snake/Snake.cpp.s
+.PHONY : src/Snake/Snake.s
+
+# target to generate assembly for a file
+src/Snake/Snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start.dir/build.make CMakeFiles/start.dir/src/Snake/Snake.cpp.s
+.PHONY : src/Snake/Snake.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -189,6 +237,12 @@ help:
 	@echo "... src/Background/Background.o"
 	@echo "... src/Background/Background.i"
 	@echo "... src/Background/Background.s"
+	@echo "... src/Food/Food.o"
+	@echo "... src/Food/Food.i"
+	@echo "... src/Food/Food.s"
+	@echo "... src/Snake/Snake.o"
+	@echo "... src/Snake/Snake.i"
+	@echo "... src/Snake/Snake.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
