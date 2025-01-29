@@ -560,6 +560,7 @@ CMakeFiles/start.dir/src/Snake/Snake.cpp.o: /home/admin1/Стільниця/Snak
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/chrono.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
@@ -585,6 +586,7 @@ CMakeFiles/start.dir/src/Snake/Snake.cpp.o: /home/admin1/Стільниця/Snak
   /usr/include/c++/14/bits/new_allocator.h \
   /usr/include/c++/14/bits/ostream.tcc \
   /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
@@ -595,6 +597,7 @@ CMakeFiles/start.dir/src/Snake/Snake.cpp.o: /home/admin1/Стільниця/Snak
   /usr/include/c++/14/bits/requires_hosted.h \
   /usr/include/c++/14/bits/specfun.h \
   /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/std_thread.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_bvector.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -610,7 +613,9 @@ CMakeFiles/start.dir/src/Snake/Snake.cpp.o: /home/admin1/Стільниця/Snak
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/this_thread_sleep.h \
   /usr/include/c++/14/bits/uniform_int_dist.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -625,6 +630,7 @@ CMakeFiles/start.dir/src/Snake/Snake.cpp.o: /home/admin1/Стільниця/Snak
   /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/ctime \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/cwctype \
   /usr/include/c++/14/debug/assertions.h \
@@ -648,11 +654,13 @@ CMakeFiles/start.dir/src/Snake/Snake.cpp.o: /home/admin1/Стільниця/Snak
   /usr/include/c++/14/pstl/glue_numeric_defs.h \
   /usr/include/c++/14/pstl/pstl_config.h \
   /usr/include/c++/14/random \
+  /usr/include/c++/14/ratio \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
   /usr/include/c++/14/system_error \
+  /usr/include/c++/14/thread \
   /usr/include/c++/14/tr1/bessel_function.tcc \
   /usr/include/c++/14/tr1/beta_function.tcc \
   /usr/include/c++/14/tr1/ell_integral.tcc \
@@ -822,7 +830,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Snake/src/m
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
   /usr/include/c++/14/bits/std_abs.h \
-  /usr/include/c++/14/bits/std_thread.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_bvector.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -837,8 +844,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Snake/src/m
   /usr/include/c++/14/bits/streambuf_iterator.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
-  /usr/include/c++/14/bits/this_thread_sleep.h \
-  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -879,7 +884,6 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Snake/src/m
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
   /usr/include/c++/14/system_error \
-  /usr/include/c++/14/thread \
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
   /usr/include/c++/14/typeinfo \
@@ -923,11 +927,11 @@ CMakeFiles/start.dir/src/main.cpp.o: /home/admin1/Стільниця/Snake/src/m
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h
 
 
+/home/admin1/Стільниця/Snake/src/main.cpp:
+
 /usr/include/c++/14/ctime:
 
 /usr/include/c++/14/bits/parse_numbers.h:
-
-/home/admin1/Стільниця/Snake/src/main.cpp:
 
 /home/admin1/Стільниця/Snake/lib/Food.h:
 

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <raylib.h>
 #include <chrono>
-#include <thread>
 #include "../lib/Background.h"
 #include "../lib/Snake.h"
 
@@ -13,20 +12,15 @@ int main() {
     SetTargetFPS(60);
 
     Snake snake;
-    Background background;
 
     while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(RAYWHITE);
+        snake.Draw();
 
-        
         snake.UpdateSnake();
-        // snake.SnakeDraw();
-
-        // Затримка на 50 мілісекунд
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-            
-        background.Draw();
+        snake.SnakeDraw();
+        
         EndDrawing();
     }
 
