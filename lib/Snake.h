@@ -39,6 +39,9 @@ class Snake : public Food {
         void SnakeClear();
 
         void UpdateSnake();
+
+        void CrashedIntoSnake(int valueRow, int valueCol);
+
         void SnakeEatFood();
         int getCalories();
         // void FoodGeneration();

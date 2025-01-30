@@ -3,6 +3,7 @@
 #include <thread>
 #include "../../lib/Snake.h"
 
+
 Snake::Snake() {
     this->numRows = 20;
     this->numCols = 20;
@@ -45,14 +46,14 @@ void Snake::SnakeEatFood() {
         calories += 1; // Додаємо 1 калорію за їжу
         std::cout << "Calories: " << calories << std::endl;
 
-        if (calories >= growthThreshold) {
-            snakeSize++;
-            calories = 0;
-        }
+        // Збільшуємо розмір змії відразу після їжі
+        snakeSize++;
+        std::cout << "Розмір: " << snakeSize << std::endl;
 
         FoodGeneration();
     }
 }
+
 
 
 void Snake::UpdateSnake() {
@@ -72,15 +73,53 @@ void Snake::UpdateSnake() {
     if (newCol < 0) newCol = numCols - 1;
     if (newCol >= numCols) newCol = 0;
 
+
+    CrashedIntoSnake(newRow, newCol);
+
+     // Перевірка на зіткнення з собою
+    for (const auto& segment : body) {
+        if (segment.row == newRow && segment.col == newCol) {
+            std::cout << "Game Over! Snake collided with itself." << std::endl;
+            exit(0);
+        }
+    }
+
+    SnakeEatFood();
+
     // Додаємо нову голову
     body.insert(body.begin(), {newRow, newCol});
 
     // Видаляємо хвіст, якщо довжина перевищує snakeSize
-    SnakeClear();
+    if (body.size() > snakeSize) {
+    SnakeSegment tail = body.back(); // Беремо останній елемент змійки (хвіст)
+    body.pop_back();
+
+    // Очищуємо клітинку, де був хвіст
+    grid[tail.row][tail.col] = 0;
+}
 
     // Оновлюємо позицію голови
     snakeRow = newRow;
     snakeCol = newCol;
+}
+
+
+void Snake::CrashedIntoSnake(int valueRow, int valueCol){
+     // Перевірка на зіткнення з собою
+    for (const auto& segment : body) {
+        if (segment.row == valueRow && segment.col == valueCol) {
+            std::cout << "Game Over! Snake collided with itself." << std::endl;
+            exit(0);
+        }
+    }
+}
+
+void Snake::SnakeClear() {
+    std::cout << "Body size before clearing: " << body.size() << ", Snake size: " << snakeSize << std::endl;
+    if (body.size() > snakeSize) {
+        body.pop_back();
+        std::cout << "Removed tail segment. New body size: " << body.size() << std::endl;
+    }
 }
 
 
@@ -92,11 +131,4 @@ void Snake::SnakeDraw() {
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
 
-void Snake::SnakeClear() {
-    std::cout << "Body size before clearing: " << body.size() << ", Snake size: " << snakeSize << std::endl;
-    if (body.size() > snakeSize) {
-        body.pop_back();
-        std::cout << "Removed tail segment. New body size: " << body.size() << std::endl;
-    }
-}
 

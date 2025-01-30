@@ -26,7 +26,7 @@ void Food::FoodGeneration() {
         randomCol = colDistribution(generator);
     } while (grid[randomRow][randomCol] == 4); // Перевіряємо, що їжа не з'являється на змійці
 
-    std::uniform_int_distribution<int> rand(1, 8); // Вибираємо випадковий колір їжі (від 1 до 8)
+    std::uniform_int_distribution<int> rand(1, 3); // Вибираємо випадковий колір їжі (від 1 до 8)
     int random = rand(generator);
 
     grid[randomRow][randomCol] = random;

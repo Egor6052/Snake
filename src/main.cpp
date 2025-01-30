@@ -21,7 +21,7 @@ int main() {
 
         snake.Draw();
 
-        snake.FoodGeneration();
+        // snake.FoodGeneration();
 
         snake.UpdateSnake();
         snake.SnakeDraw();
