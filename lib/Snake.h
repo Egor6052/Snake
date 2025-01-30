@@ -31,11 +31,12 @@ class Snake : public Food {
         Snake();
         ~Snake();
 
-        void setMoney();
+        void setMoney(int valueMoney);
         int getMoney();
+
         void snakeGrowth();
 
-        void SnakeDraw();
+        void SnakeDraw(Texture2D& texture);
         void SnakeClear();
 
         void UpdateSnake();

@@ -9,6 +9,7 @@ class Food : public Background {
         int foodRow;
         int foodCol;
 
+        // Texture2D foodTexture;
         // float calories;
     public:
 
@@ -20,4 +21,5 @@ class Food : public Background {
 
         // float getCalories();
         void FoodGeneration();
+        void DrawFood(Texture2D& foodTexture);
 };

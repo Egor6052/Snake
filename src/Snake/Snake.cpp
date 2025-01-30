@@ -10,24 +10,27 @@ Snake::Snake() {
 
     this->money = 0.0f;
     this->calories = 0;
-    this->growthThreshold = 10; // Приклад: Зростання при 10 калоріях
+    this->growthThreshold = 10;
 
     this->snakeRow = numRows / 2;
     this->snakeCol = numCols / 2;
     this->dirRow = 0;
     this->dirCol = 1;
 
-    this->snakeSize = 3; // Початковий розмір змійки - 1 клітинка
-    this->body.push_back({snakeRow, snakeCol}); // Додаємо початкову позицію змійки
+    this->snakeSize = 3;
+    // Додаємо початкову позицію змійки
+    this->body.push_back({snakeRow, snakeCol});
+    
     FoodGeneration();
 
 }
 
 Snake::~Snake(){    }
 
-void Snake::setMoney(){
-    this->money = getCalories() / 0.5f;
+void Snake::setMoney(int valueMoney){
+    this->money = valueMoney;
 }
+
 int Snake::getMoney(){
     return this->money;
 }
@@ -43,12 +46,14 @@ int Snake::getCalories(){
 
 void Snake::SnakeEatFood() {
     if (snakeRow == getFoodRow() && snakeCol == getFoodCol()) {
-        calories += 1; // Додаємо 1 калорію за їжу
-        std::cout << "Calories: " << calories << std::endl;
+        grid[getFoodRow()][getFoodCol()] = 7;
+        calories += 1;
+        setMoney(calories);
+        // std::cout << "Calories: " << calories << std::endl;
 
         // Збільшуємо розмір змії відразу після їжі
         snakeSize++;
-        std::cout << "Розмір: " << snakeSize << std::endl;
+        // std::cout << "Розмір: " << snakeSize << std::endl;
 
         FoodGeneration();
     }
@@ -95,7 +100,7 @@ void Snake::UpdateSnake() {
     body.pop_back();
 
     // Очищуємо клітинку, де був хвіст
-    grid[tail.row][tail.col] = 0;
+    grid[tail.row][tail.col] = 6;
 }
 
     // Оновлюємо позицію голови
@@ -123,12 +128,22 @@ void Snake::SnakeClear() {
 }
 
 
-void Snake::SnakeDraw() {
+
+void Snake::SnakeDraw(Texture2D& texture) {
     for (const SnakeSegment& segment : body) {
-        grid[segment.row][segment.col] = 4;
+        DrawTexture(texture, segment.col * 30, segment.row * 30, WHITE);
     }
     // Затримка після малювання всіх сегментів
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
+
+
+// void Snake::SnakeDraw() {
+//     for (const SnakeSegment& segment : body) {
+//         grid[segment.row][segment.col] = 4;
+//     }
+//     // Затримка після малювання всіх сегментів
+//     std::this_thread::sleep_for(std::chrono::milliseconds(100));
+// }
 
 

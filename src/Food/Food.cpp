@@ -5,9 +5,11 @@
 Food::Food(){
     this->foodRow = 0;
     this->foodCol = 0;
+    // foodTexture = LoadTexture("../assets/Snake.png");
     // this->calories = 0.0f;
 }
-Food::~Food(){  }
+Food::~Food(){  
+}
 
 // float Food::getCalories(){
 //     return this->calories;
@@ -24,9 +26,9 @@ void Food::FoodGeneration() {
     do {
         randomRow = rowDistribution(generator);
         randomCol = colDistribution(generator);
-    } while (grid[randomRow][randomCol] == 4); // Перевіряємо, що їжа не з'являється на змійці
+    } while (grid[randomRow][randomCol] == 7);
 
-    std::uniform_int_distribution<int> rand(1, 3); // Вибираємо випадковий колір їжі (від 1 до 8)
+    std::uniform_int_distribution<int> rand(0, 5);
     int random = rand(generator);
 
     grid[randomRow][randomCol] = random;
@@ -34,6 +36,11 @@ void Food::FoodGeneration() {
         this->foodRow = randomRow;
         this->foodCol = randomCol;
 }
+
+void Food::DrawFood(Texture2D& foodTexture) {
+    DrawTexture(foodTexture, foodCol * 30, foodRow * 30, WHITE);
+}
+
 
 int Food::getFoodRow(){
     return this->foodRow;
