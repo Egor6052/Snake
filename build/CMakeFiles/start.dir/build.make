@@ -133,12 +133,14 @@ start_OBJECTS = \
 "CMakeFiles/start.dir/src/Snake/Snake.cpp.o"
 
 # External object files for target start
-start_EXTERNAL_OBJECTS =
+start_EXTERNAL_OBJECTS = \
+"/home/admin1/Стільниця/Snake/build/icon.o"
 
 start: CMakeFiles/start.dir/src/main.cpp.o
 start: CMakeFiles/start.dir/src/Background/Background.cpp.o
 start: CMakeFiles/start.dir/src/Food/Food.cpp.o
 start: CMakeFiles/start.dir/src/Snake/Snake.cpp.o
+start: icon.o
 start: CMakeFiles/start.dir/build.make
 start: /usr/lib64/libraylib.so
 start: CMakeFiles/start.dir/link.txt
