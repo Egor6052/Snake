@@ -27,15 +27,22 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
 endif()
 
 # Додаємо ресурсний файл для Windows (якщо потрібно)
-# if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-#     execute_process(COMMAND magick ${CMAKE_SOURCE_DIR}/assets/logo.png ${CMAKE_BINARY_DIR}/logo.ico)
-# endif()
+# ... (ваш код для ресурсного файлу)
 
-# Додаємо об'єктний файл іконки для Linux (якщо потрібно)
-# if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-#     execute_process(COMMAND ld -r -b binary -o ${CMAKE_BINARY_DIR}/icon.o ${CMAKE_SOURCE_DIR}/assets/logo.png)
-#     set(SOURCE_FILES ${SOURCE_FILES} ${CMAKE_BINARY_DIR}/icon.o)
-# endif()
+# Додаємо об'єктний файл іконки для Linux
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    # Перевіряємо, чи існує файл іконки
+    if(EXISTS "${CMAKE_SOURCE_DIR}/assets/logo.png")
+        # Конвертуємо зображення в об'єктний файл
+        execute_process(
+            COMMAND ld -r -b binary -o "${CMAKE_BINARY_DIR}/icon.o" "${CMAKE_SOURCE_DIR}/assets/logo.png"
+            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        )
+
+        # Додаємо об'єктний файл до списку джерел
+        set(SOURCE_FILES ${SOURCE_FILES} "${CMAKE_BINARY_DIR}/icon.o")
+    endif()
+endif()
 
 add_executable(${EXECUTABLE} src/main.cpp ${SOURCE_FILES})
 
@@ -43,11 +50,24 @@ target_compile_options(${EXECUTABLE} PRIVATE -Wall -fPIC)
 
 target_include_directories(${EXECUTABLE} PRIVATE ./lib)
 
-# Додаємо бібліотеки raylib
-find_package(raylib CONFIG REQUIRED) 
-target_link_libraries(${EXECUTABLE} PRIVATE raylib) 
 
-# Якщо вам потрібні додаткові опції для Windows:
-# if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-#     # ... (наприклад, опції для MinGW)
-# endif()
+# Додаємо бібліотеки raylib
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    find_package(raylib CONFIG REQUIRED HINTS C:/Program Files/raylib)
+    target_link_libraries(${EXECUTABLE} PRIVATE raylib)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(RAYLIB REQUIRED raylib)
+    target_link_libraries(${EXECUTABLE} PRIVATE ${RAYLIB_LIBRARIES})
+endif()
+
+
+# Додаємо бібліотеки raylib
+find_package(raylib CONFIG REQUIRED HINTS /путь/до/каталогу/з/raylib)
+target_link_libraries(${EXECUTABLE} PRIVATE raylib)
+
+# Конфігурація для Windows
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    # Для Visual Studio
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc")  # Обробка виключень
+endif()

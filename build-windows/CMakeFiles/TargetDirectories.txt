@@ -1,3 +1,0 @@
-/home/admin1/Стільниця/Snake/build-windows/CMakeFiles/start-linux.dir
-/home/admin1/Стільниця/Snake/build-windows/CMakeFiles/edit_cache.dir
-/home/admin1/Стільниця/Snake/build-windows/CMakeFiles/rebuild_cache.dir
