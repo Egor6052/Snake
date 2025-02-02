@@ -1,7 +1,6 @@
 #include <iostream>
 #include <random>
 #include "../../lib/Background.h"
-// #include "../../lib/Snake.h"
 
 Background::Background(){
     this->numRows = 20;
