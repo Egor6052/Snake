@@ -19,23 +19,23 @@ set(HEADER_FILES
     ./lib/Snake.h
 )
 
-set(EXECUTABLE start)
-
-# Додаємо ресурсний файл для Windows
-
-if(WIN32)
-    execute_process(COMMAND magick convert ${CMAKE_SOURCE_DIR}/assets/logo.png ${CMAKE_BINARY_DIR}/logo.ico)
+# Визначаємо ім'я виконуваного файлу залежно від ОС
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    set(EXECUTABLE start-win)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    set(EXECUTABLE start-linux)
 endif()
 
-if(WIN32)
-    set(SOURCE_FILES ${SOURCE_FILES} icon.rc)
-endif()
+# Додаємо ресурсний файл для Windows (якщо потрібно)
+# if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+#     execute_process(COMMAND magick ${CMAKE_SOURCE_DIR}/assets/logo.png ${CMAKE_BINARY_DIR}/logo.ico)
+# endif()
 
-# Додаємо об'єктний файл іконки для Linux
-if(UNIX)
-    execute_process(COMMAND ld -r -b binary -o ${CMAKE_BINARY_DIR}/icon.o ${CMAKE_SOURCE_DIR}/assets/logo.png)
-    set(SOURCE_FILES ${SOURCE_FILES} ${CMAKE_BINARY_DIR}/icon.o)
-endif()
+# Додаємо об'єктний файл іконки для Linux (якщо потрібно)
+# if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+#     execute_process(COMMAND ld -r -b binary -o ${CMAKE_BINARY_DIR}/icon.o ${CMAKE_SOURCE_DIR}/assets/logo.png)
+#     set(SOURCE_FILES ${SOURCE_FILES} ${CMAKE_BINARY_DIR}/icon.o)
+# endif()
 
 add_executable(${EXECUTABLE} src/main.cpp ${SOURCE_FILES})
 
@@ -43,12 +43,11 @@ target_compile_options(${EXECUTABLE} PRIVATE -Wall -fPIC)
 
 target_include_directories(${EXECUTABLE} PRIVATE ./lib)
 
-if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    find_package(raylib REQUIRED)
-    target_link_libraries(${EXECUTABLE} PRIVATE raylib m)
-endif()
+# Додаємо бібліотеки raylib
+find_package(raylib CONFIG REQUIRED) 
+target_link_libraries(${EXECUTABLE} PRIVATE raylib) 
 
-if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-    target_include_directories(${EXECUTABLE} PRIVATE ${CMAKE_SOURCE_DIR}/include)
-    target_link_libraries(${EXECUTABLE} PRIVATE ${CMAKE_SOURCE_DIR}/lib/libraylib-mingw.a -lopengl32 -lgdi32 -lwinmm)
-endif()
+# Якщо вам потрібні додаткові опції для Windows:
+# if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+#     # ... (наприклад, опції для MinGW)
+# endif()

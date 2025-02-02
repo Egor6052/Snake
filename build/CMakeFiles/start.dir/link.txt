@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/start.dir/src/main.cpp.o CMakeFiles/start.dir/src/Background/Background.cpp.o CMakeFiles/start.dir/src/Food/Food.cpp.o CMakeFiles/start.dir/src/Snake/Snake.cpp.o icon.o -o start  /usr/lib64/libraylib.so -lm -L/usr/lib64 -lraylib
