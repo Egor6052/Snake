@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/start-linux.dir/src/main.cpp.o" "CMakeFiles/start-linux.dir/src/Background/Background.cpp.o" "CMakeFiles/start-linux.dir/src/Food/Food.cpp.o" "CMakeFiles/start-linux.dir/src/Snake/Snake.cpp.o" -o start-linux  /usr/lib64/libraylib.so -L/usr/lib64 -lraylib
