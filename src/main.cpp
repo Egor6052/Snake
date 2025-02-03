@@ -1,6 +1,7 @@
 #include <iostream>
 #include <raylib.h>
 #include <chrono>
+#include <string>
 #include "../lib/Background.h"
 #include "../lib/Snake.h"
 

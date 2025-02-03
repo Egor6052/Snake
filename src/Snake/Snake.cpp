@@ -28,7 +28,7 @@ Snake::Snake() {
 Snake::~Snake(){    }
 
 void Snake::setMoney(int valueMoney){
-    this->money = valueMoney;
+    this->money = static_cast<float>(valueMoney);
 }
 
 int Snake::getMoney(){
