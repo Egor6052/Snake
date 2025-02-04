@@ -13,8 +13,9 @@ struct SnakeSegment {
 class Snake : public Food {
 
     private:
-        Texture2D snakeTexture = LoadTexture("../assets/SnakeBlock1.png");
-        Texture2D foodTexture = LoadTexture("../assets/Apple.png");
+        Texture2D snakeTexture;
+        Texture2D foodTexture;
+
 
         int numRows;
         int numCols;

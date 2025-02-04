@@ -1,9 +1,9 @@
 # CMake generation dependency list for this directory.
-C:/Users/Administrator/Desktop/Snake-NewSite/CMakeLists.txt
-C:/Users/Administrator/Desktop/Snake-NewSite/build/CMakeFiles/3.29.5-msvc4/CMakeCCompiler.cmake
-C:/Users/Administrator/Desktop/Snake-NewSite/build/CMakeFiles/3.29.5-msvc4/CMakeCXXCompiler.cmake
-C:/Users/Administrator/Desktop/Snake-NewSite/build/CMakeFiles/3.29.5-msvc4/CMakeRCCompiler.cmake
-C:/Users/Administrator/Desktop/Snake-NewSite/build/CMakeFiles/3.29.5-msvc4/CMakeSystem.cmake
+C:/Users/Administrator/Desktop/Snake/CMakeLists.txt
+C:/Users/Administrator/Desktop/Snake/build/CMakeFiles/3.29.5-msvc4/CMakeCCompiler.cmake
+C:/Users/Administrator/Desktop/Snake/build/CMakeFiles/3.29.5-msvc4/CMakeCXXCompiler.cmake
+C:/Users/Administrator/Desktop/Snake/build/CMakeFiles/3.29.5-msvc4/CMakeRCCompiler.cmake
+C:/Users/Administrator/Desktop/Snake/build/CMakeFiles/3.29.5-msvc4/CMakeSystem.cmake
 D:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in
 D:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c
 D:/VisualStudio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake

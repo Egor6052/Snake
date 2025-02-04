@@ -5,6 +5,16 @@
 
 
 Snake::Snake() {
+    snakeTexture = LoadTexture("../assets/SnakeBlock1.png");
+    foodTexture = LoadTexture("../assets/Apple.png");
+
+
+    if (snakeTexture.id == 0) {
+        std::cerr << "Error: Failed to load SnakeBlock1.png" << std::endl;
+    }
+    if (foodTexture.id == 0) {
+        std::cerr << "Error: Failed to load Apple.png" << std::endl;
+    }
     this->numRows = 20;
     this->numCols = 20;
 
@@ -37,12 +47,12 @@ void Snake::setMoney(int valueMoney){
 }
 
 int Snake::getMoney(){
-    return this->money;
+    return static_cast<int>(this->money);
 }
 
 
 void Snake::snakeGrowth(){
-    this->snakeSize = getCalories();
+    snakeSize = static_cast<int>(getCalories());
 }
 
 int Snake::getCalories(){

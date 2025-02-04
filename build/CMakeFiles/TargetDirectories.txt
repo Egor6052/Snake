@@ -1,3 +1,3 @@
-C:/Users/Administrator/Desktop/Snake-NewSite/build/CMakeFiles/start-win.dir
-C:/Users/Administrator/Desktop/Snake-NewSite/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Administrator/Desktop/Snake-NewSite/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Administrator/Desktop/Snake/build/CMakeFiles/start-win.dir
+C:/Users/Administrator/Desktop/Snake/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Administrator/Desktop/Snake/build/CMakeFiles/ZERO_CHECK.dir
