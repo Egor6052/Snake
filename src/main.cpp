@@ -1,9 +1,6 @@
 #include <iostream>
 #include <raylib.h>
-#include <chrono>
-#include <string>
-#include "../lib/Background.h"
-#include "../lib/Snake.h"
+#include "../lib/Menu.h"
 
 int main() {
     const int screenWidth = 600;
@@ -11,32 +8,24 @@ int main() {
 
     InitWindow(screenWidth, screenHeight, "˚｡⋆Snake⋆｡˚");
     SetTargetFPS(60);
-    Color color = {40, 50, 65, 255};
+    Color backgroundColor = {40, 50, 65, 255};
 
-    Snake snake;
-    Texture2D snakeTexture = LoadTexture("../assets/SnakeBlock1.png");
-    Texture2D foodTexture = LoadTexture("../assets/Apple.png");
+    Menu game;
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        ClearBackground(color);
-        
-        // Виведення тексту внизу екрану
-        DrawText(("Your score: " + std::to_string(snake.getMoney())).c_str(), 10, screenHeight - 30, 20, LIGHTGRAY);
+        ClearBackground(backgroundColor);
 
-        snake.Draw();
-
-        // snake.FoodGeneration();
-
-        snake.UpdateSnake();
-        snake.SnakeDraw(snakeTexture);
-        snake.DrawFood(foodTexture);
+        if (game.isInMenu) {
+            
+            game.ShowMenu();
+        } else {
+            ClearBackground(backgroundColor);
+            game.Start();
+        }
 
         EndDrawing();
     }
-
-    UnloadTexture(snakeTexture);
-    UnloadTexture(foodTexture); 
 
     CloseWindow();
     return 0;

@@ -21,11 +21,16 @@ Snake::Snake() {
     // Додаємо початкову позицію змійки
     this->body.push_back({snakeRow, snakeCol});
     
+    this->SnakeIsDead = false;
+    
     FoodGeneration();
 
 }
 
-Snake::~Snake(){    }
+Snake::~Snake(){    
+    UnloadTexture(snakeTexture);
+    UnloadTexture(foodTexture);
+}
 
 void Snake::setMoney(int valueMoney){
     this->money = static_cast<float>(valueMoney);
@@ -68,6 +73,11 @@ void Snake::UpdateSnake() {
     if (IsKeyPressed(KEY_A) && dirCol == 0) { dirRow = 0; dirCol = -1; }
     if (IsKeyPressed(KEY_D) && dirCol == 0) { dirRow = 0; dirCol = 1; }
 
+    if (IsKeyPressed(KEY_UP) && dirRow == 0) { dirRow = -1; dirCol = 0; }
+    if (IsKeyPressed(KEY_DOWN) && dirRow == 0) { dirRow = 1; dirCol = 0; }
+    if (IsKeyPressed(KEY_LEFT) && dirCol == 0) { dirRow = 0; dirCol = -1; }
+    if (IsKeyPressed(KEY_RIGHT) && dirCol == 0) { dirRow = 0; dirCol = 1; }
+
     // Оновлення позиції голови
     int newRow = snakeRow + dirRow;
     int newCol = snakeCol + dirCol;
@@ -80,15 +90,6 @@ void Snake::UpdateSnake() {
 
 
     CrashedIntoSnake(newRow, newCol);
-
-     // Перевірка на зіткнення з собою
-    for (const auto& segment : body) {
-        if (segment.row == newRow && segment.col == newCol) {
-            std::cout << "Game Over! Snake collided with itself." << std::endl;
-            exit(0);
-        }
-    }
-
     SnakeEatFood();
 
     // Додаємо нову голову
@@ -114,10 +115,27 @@ void Snake::CrashedIntoSnake(int valueRow, int valueCol){
     for (const auto& segment : body) {
         if (segment.row == valueRow && segment.col == valueCol) {
             std::cout << "Game Over! Snake collided with itself." << std::endl;
-            exit(0);
+            SnakeIsDead = true;
         }
     }
 }
+
+void Snake::Reset() {
+    this->snakeRow = numRows / 2;
+    this->snakeCol = numCols / 2;
+    this->dirRow = 0;
+    this->dirCol = 1;
+
+    this->snakeSize = 3;
+    this->calories = 0;
+    this->money = 0.0f;
+    this->SnakeIsDead = false;
+    this->body.clear();
+    this->body.push_back({snakeRow, snakeCol});
+
+    FoodGeneration();
+}
+
 
 void Snake::SnakeClear() {
     std::cout << "Body size before clearing: " << body.size() << ", Snake size: " << snakeSize << std::endl;
@@ -129,9 +147,12 @@ void Snake::SnakeClear() {
 
 
 
-void Snake::SnakeDraw(Texture2D& texture) {
+void Snake::SnakeDraw() {
+    DrawFood(foodTexture);
+
     for (const SnakeSegment& segment : body) {
-        DrawTexture(texture, segment.col * 30, segment.row * 30, WHITE);
+
+        DrawTexture(snakeTexture, segment.col * 30, segment.row * 30, WHITE);
         grid[segment.row][segment.col] = 7;
     }
     // Затримка після малювання всіх сегментів

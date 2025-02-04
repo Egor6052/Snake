@@ -13,12 +13,14 @@ set(SOURCE_FILES
     ./src/Background/Background.cpp
     ./src/Food/Food.cpp
     ./src/Snake/Snake.cpp
+    ./src/Menu/Menu.cpp
 )
 
 set(HEADER_FILES
     ./lib/Background.h
     ./lib/Food.h
     ./lib/Snake.h
+    ./lib/Menu.h
 )
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Windows")

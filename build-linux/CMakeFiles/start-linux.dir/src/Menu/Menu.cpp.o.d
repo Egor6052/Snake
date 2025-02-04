@@ -1,7 +1,8 @@
-CMakeFiles/start-linux.dir/src/main.cpp.o: \
- /home/admin1/Стільниця/Snake/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
- /usr/include/c++/14/bits/requires_hosted.h \
+CMakeFiles/start-linux.dir/src/Menu/Menu.cpp.o: \
+ /home/admin1/Стільниця/Snake/src/Menu/Menu.cpp \
+ /usr/include/stdc-predef.h /usr/include/raylib.h \
+ /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
+ /usr/include/c++/14/iostream /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/os_defines.h \
@@ -17,7 +18,6 @@ CMakeFiles/start-linux.dir/src/main.cpp.o: \
  /usr/include/bits/libc-header-start.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h \
  /usr/lib/gcc/x86_64-redhat-linux/14/include/stddef.h \
- /usr/lib/gcc/x86_64-redhat-linux/14/include/stdarg.h \
  /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
  /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
@@ -122,12 +122,12 @@ CMakeFiles/start-linux.dir/src/main.cpp.o: \
  /usr/include/c++/14/bits/locale_facets.tcc \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc /usr/include/raylib.h \
- /home/admin1/Стільниця/Snake/src/../lib/Menu.h \
- /home/admin1/Стільниця/Snake/src/../lib/Snake.h \
+ /usr/include/c++/14/bits/istream.tcc \
+ /home/admin1/Стільниця/Snake/src/Menu/../../lib/Menu.h \
+ /home/admin1/Стільниця/Snake/src/Menu/../../lib/Snake.h \
  /usr/include/c++/14/vector /usr/include/c++/14/bits/stl_uninitialized.h \
  /usr/include/c++/14/bits/stl_vector.h \
  /usr/include/c++/14/bits/stl_bvector.h \
  /usr/include/c++/14/bits/vector.tcc \
- /home/admin1/Стільниця/Snake/src/../lib/Food.h \
- /home/admin1/Стільниця/Snake/src/../lib/Background.h
+ /home/admin1/Стільниця/Snake/src/Menu/../../lib/Food.h \
+ /home/admin1/Стільниця/Snake/src/Menu/../../lib/Background.h

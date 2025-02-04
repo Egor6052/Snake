@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin1/Стільниця/Snake/src/Background/Background.cpp" "CMakeFiles/start-linux.dir/src/Background/Background.cpp.o" "gcc" "CMakeFiles/start-linux.dir/src/Background/Background.cpp.o.d"
   "/home/admin1/Стільниця/Snake/src/Food/Food.cpp" "CMakeFiles/start-linux.dir/src/Food/Food.cpp.o" "gcc" "CMakeFiles/start-linux.dir/src/Food/Food.cpp.o.d"
+  "/home/admin1/Стільниця/Snake/src/Menu/Menu.cpp" "CMakeFiles/start-linux.dir/src/Menu/Menu.cpp.o" "gcc" "CMakeFiles/start-linux.dir/src/Menu/Menu.cpp.o.d"
   "/home/admin1/Стільниця/Snake/src/Snake/Snake.cpp" "CMakeFiles/start-linux.dir/src/Snake/Snake.cpp.o" "gcc" "CMakeFiles/start-linux.dir/src/Snake/Snake.cpp.o.d"
   "/home/admin1/Стільниця/Snake/src/main.cpp" "CMakeFiles/start-linux.dir/src/main.cpp.o" "gcc" "CMakeFiles/start-linux.dir/src/main.cpp.o.d"
   )

@@ -177,6 +177,30 @@ src/Food/Food.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start-linux.dir/build.make CMakeFiles/start-linux.dir/src/Food/Food.cpp.s
 .PHONY : src/Food/Food.cpp.s
 
+src/Menu/Menu.o: src/Menu/Menu.cpp.o
+.PHONY : src/Menu/Menu.o
+
+# target to build an object file
+src/Menu/Menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start-linux.dir/build.make CMakeFiles/start-linux.dir/src/Menu/Menu.cpp.o
+.PHONY : src/Menu/Menu.cpp.o
+
+src/Menu/Menu.i: src/Menu/Menu.cpp.i
+.PHONY : src/Menu/Menu.i
+
+# target to preprocess a source file
+src/Menu/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start-linux.dir/build.make CMakeFiles/start-linux.dir/src/Menu/Menu.cpp.i
+.PHONY : src/Menu/Menu.cpp.i
+
+src/Menu/Menu.s: src/Menu/Menu.cpp.s
+.PHONY : src/Menu/Menu.s
+
+# target to generate assembly for a file
+src/Menu/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start-linux.dir/build.make CMakeFiles/start-linux.dir/src/Menu/Menu.cpp.s
+.PHONY : src/Menu/Menu.cpp.s
+
 src/Snake/Snake.o: src/Snake/Snake.cpp.o
 .PHONY : src/Snake/Snake.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... src/Food/Food.o"
 	@echo "... src/Food/Food.i"
 	@echo "... src/Food/Food.s"
+	@echo "... src/Menu/Menu.o"
+	@echo "... src/Menu/Menu.i"
+	@echo "... src/Menu/Menu.s"
 	@echo "... src/Snake/Snake.o"
 	@echo "... src/Snake/Snake.i"
 	@echo "... src/Snake/Snake.s"
