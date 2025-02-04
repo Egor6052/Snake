@@ -132,12 +132,16 @@ void Snake::SnakeClear() {
 void Snake::SnakeDraw(Texture2D& texture) {
     for (const SnakeSegment& segment : body) {
         DrawTexture(texture, segment.col * 30, segment.row * 30, WHITE);
+        grid[segment.row][segment.col] = 7;
     }
     // Затримка після малювання всіх сегментів
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::this_thread::sleep_for(std::chrono::milliseconds(80));
 }
 
 
+
+// Затримка після малювання всіх сегментів
+    //std::this_thread::sleep_for(std::chrono::milliseconds(100));
 // void Snake::SnakeDraw() {
 //     for (const SnakeSegment& segment : body) {
 //         grid[segment.row][segment.col] = 4;
