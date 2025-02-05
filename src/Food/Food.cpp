@@ -42,7 +42,6 @@ Food::~Food() {
 
 // Генеруємо нову їжу
 void Food::FoodGeneration() {
-    if (foodTextures.empty()) return; // Захист від падіння
 
     std::random_device rd;
     std::mt19937 generator(rd());
@@ -67,7 +66,6 @@ void Food::FoodGeneration() {
 // Малюємо їжу
 void Food::DrawFood() {
     if (selectedFoodTexture) {
-        std::cout << "Drawing food at (" << foodCol << ", " << foodRow << ")\n";
         DrawTexture(*selectedFoodTexture, foodCol * 30, foodRow * 30, WHITE);
     } else {
         std::cout << "Error: selectedFoodTexture is nullptr!\n";

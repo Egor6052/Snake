@@ -115,7 +115,7 @@ void Menu::Start() {
         DrawText(("Your score: " + std::to_string(snake.getMoney())).c_str(), 40, screenHeight + 10, 20, LIGHTGRAY);
     }
     // Затримка після малювання всіх сегментів
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::this_thread::sleep_for(std::chrono::milliseconds(95));
 }
 
 void Menu::setMessage(std::string valueMessage) {
