@@ -5,8 +5,8 @@
 
 
 Snake::Snake() {
-    snakeTexture = LoadTexture("../assets/SnakeBlock1.png");
-    foodTexture = LoadTexture("../assets/Apple.png");
+    snakeTexture = LoadTexture("assets\\SnakeBlock1.png");
+    foodTexture = LoadTexture("assets\\Apple.png");
 
 
     if (snakeTexture.id == 0) {

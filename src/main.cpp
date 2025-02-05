@@ -11,6 +11,7 @@ int main() {
     Color backgroundColor = {40, 50, 65, 255};
 
     Menu game;
+    //game.ShowMenu();
 
     while (!WindowShouldClose()) {
         BeginDrawing();
