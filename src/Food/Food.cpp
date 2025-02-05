@@ -2,22 +2,53 @@
 #include <random>
 #include "../../lib/Food.h"
 
-Food::Food(){
+Food::Food() {
     this->foodRow = 0;
     this->foodCol = 0;
-    // foodTexture = LoadTexture("../assets/Snake.png");
-    // this->calories = 0.0f;
-}
-Food::~Food(){  
+
+    // Завантажуємо текстури у вектор
+    std::vector<std::string> texturePaths = {
+        "assets/Apple.png",
+        "assets/money.png",
+        "assets/cherry.png",
+        "assets/cookie.png"
+    };
+
+    for (const std::string& path : texturePaths) {
+        Texture2D tex = LoadTexture(path.c_str());
+        
+        // Перевіряємо, чи завантажилася текстура
+        if (tex.id == 0) {
+            std::cerr << "Error: Failed to load texture: " << path << std::endl;
+        } else {
+            foodTextures.push_back(tex);
+        }
+    }
+
+    // Перевіряємо, чи є завантажені текстури
+    if (!foodTextures.empty()) {
+        selectedFoodTexture = &foodTextures[0];
+    } else {
+        selectedFoodTexture = nullptr;
+        std::cerr << "Error: No food textures loaded!" << std::endl;
+    }
 }
 
-// float Food::getCalories(){
-//     return this->calories;
-// }
+Food::~Food() {
+    for (auto& texture : foodTextures) {
+        UnloadTexture(texture);
+    }
+}
 
+// Генеруємо нову їжу
 void Food::FoodGeneration() {
+    if (foodTextures.empty()) return; // Захист від падіння
+
     std::random_device rd;
     std::mt19937 generator(rd());
+
+    std::uniform_int_distribution<int> randTexture(0, foodTextures.size() - 1);
+    selectedFoodTexture = &foodTextures[randTexture(generator)];
 
     std::uniform_int_distribution<int> rowDistribution(0, getNumRows() - 1);
     std::uniform_int_distribution<int> colDistribution(0, getNumCols() - 1);
@@ -28,17 +59,19 @@ void Food::FoodGeneration() {
         randomCol = colDistribution(generator);
     } while (grid[randomRow][randomCol] == 7);
 
-    std::uniform_int_distribution<int> rand(0, 5);
-    int random = rand(generator);
+    this->foodRow = randomRow;
+    this->foodCol = randomCol;
 
-    grid[randomRow][randomCol] = random;
-
-        this->foodRow = randomRow;
-        this->foodCol = randomCol;
 }
 
-void Food::DrawFood(Texture2D& foodTexture) {
-    DrawTexture(foodTexture, foodCol * 30, foodRow * 30, WHITE);
+// Малюємо їжу
+void Food::DrawFood() {
+    if (selectedFoodTexture) {
+        std::cout << "Drawing food at (" << foodCol << ", " << foodRow << ")\n";
+        DrawTexture(*selectedFoodTexture, foodCol * 30, foodRow * 30, WHITE);
+    } else {
+        std::cout << "Error: selectedFoodTexture is nullptr!\n";
+    }
 }
 
 

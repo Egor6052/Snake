@@ -18,7 +18,6 @@ int main() {
         ClearBackground(backgroundColor);
 
         if (game.isInMenu) {
-            
             game.ShowMenu();
         } else {
             ClearBackground(backgroundColor);

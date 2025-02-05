@@ -1,11 +1,13 @@
 #include <raylib.h>
 #include <iostream>
 #include <string>
+#include <thread>
+
 #include "../../lib/Menu.h"
 
 Menu::Menu() {
-    screenWidth = 800.0f;  // Використовуємо float
-    screenHeight = 600.0f; // Використовуємо float
+    screenWidth = 800.0f;
+    screenHeight = 600.0f;
 
     isInMenu = true;
     isPaused = false;
@@ -56,14 +58,6 @@ void Menu::ShowMenu() {
     }
     DrawRectangle(static_cast<int>(buttonPosition.x), static_cast<int>(buttonPosition.y), static_cast<int>(buttonSize.x), static_cast<int>(buttonSize.y), buttonColor);
     DrawText("Exit", static_cast<int>(buttonPosition.x) + 85, static_cast<int>(buttonPosition.y) + 15, 20, LIGHTGRAY);
-}
-
-void Menu::setMessage(std::string valueMessage) {
-    this->Massage = valueMessage;
-}
-
-std::string Menu::getMessage() {
-    return this->Massage;
 }
 
 void Menu::Start() {
@@ -120,6 +114,16 @@ void Menu::Start() {
     else {
         DrawText(("Your score: " + std::to_string(snake.getMoney())).c_str(), 40, screenHeight + 10, 20, LIGHTGRAY);
     }
+    // Затримка після малювання всіх сегментів
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+}
+
+void Menu::setMessage(std::string valueMessage) {
+    this->Massage = valueMessage;
+}
+
+std::string Menu::getMessage() {
+    return this->Massage;
 }
 
 void Menu::Pause() {

@@ -143,13 +143,7 @@ CMakeFiles/start-linux.dir/src/Snake/Snake.cpp.o: \
  /usr/include/c++/14/bits/uniform_int_dist.h \
  /usr/include/c++/14/x86_64-redhat-linux/bits/opt_random.h \
  /usr/include/c++/14/bits/random.tcc /usr/include/c++/14/numeric \
- /usr/include/c++/14/bits/stl_numeric.h /usr/include/c++/14/thread \
- /usr/include/c++/14/bits/std_thread.h /usr/include/c++/14/tuple \
- /usr/include/c++/14/bits/uses_allocator.h \
- /usr/include/c++/14/bits/unique_ptr.h \
- /usr/include/c++/14/bits/this_thread_sleep.h \
- /usr/include/c++/14/bits/chrono.h /usr/include/c++/14/ratio \
- /usr/include/c++/14/ctime /usr/include/c++/14/bits/parse_numbers.h \
+ /usr/include/c++/14/bits/stl_numeric.h \
  /home/admin1/Стільниця/Snake/src/Snake/../../lib/Snake.h \
  /usr/include/raylib.h \
  /home/admin1/Стільниця/Snake/src/Snake/../../lib/Food.h \

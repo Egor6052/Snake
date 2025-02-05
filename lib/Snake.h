@@ -13,8 +13,11 @@ struct SnakeSegment {
 class Snake : public Food {
 
     private:
-        Texture2D snakeTexture;
-        Texture2D foodTexture;
+        Texture2D headTexture;
+        Texture2D bodyTexture;
+        Texture2D tailTexture;
+
+        Texture2D tail2Texture;
 
 
         int numRows;

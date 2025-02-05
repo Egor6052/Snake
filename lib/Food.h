@@ -9,8 +9,8 @@ class Food : public Background {
         int foodRow;
         int foodCol;
 
-        // Texture2D foodTexture;
-        // float calories;
+        std::vector<Texture2D> foodTextures;
+        Texture2D* selectedFoodTexture;
     public:
 
         Food();
@@ -21,5 +21,5 @@ class Food : public Background {
 
         // float getCalories();
         void FoodGeneration();
-        void DrawFood(Texture2D& foodTexture);
+        void DrawFood();
 };

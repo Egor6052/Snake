@@ -3,7 +3,7 @@
 
 #include <raylib.h>
 #include "Snake.h"
-#include <string>  // ƒл€ використанн€ std::string
+#include <string>
 
 class Menu {
 public:
@@ -29,7 +29,7 @@ public:
     }
 
 private:
-    float screenWidth, screenHeight;  // «м≥нив тип на float
+    float screenWidth, screenHeight;
 };
 
 #endif

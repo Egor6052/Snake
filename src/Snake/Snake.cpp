@@ -1,20 +1,18 @@
 #include <iostream>
 #include <random>
-#include <thread>
+// #include <thread>
 #include "../../lib/Snake.h"
 
 
 Snake::Snake() {
-    snakeTexture = LoadTexture("assets/SnakeBlock1.png");
-    foodTexture = LoadTexture("assets/Apple.png");
+    headTexture = LoadTexture("assets/head.png");
+    bodyTexture = LoadTexture("assets/body.png");
+    tailTexture = LoadTexture("assets/tail.png");
+    tail2Texture = LoadTexture("assets/tail2.png");
 
 
-    if (snakeTexture.id == 0) {
-        std::cerr << "Error: Failed to load SnakeBlock1.png" << std::endl;
-    }
-    if (foodTexture.id == 0) {
-        std::cerr << "Error: Failed to load Apple.png" << std::endl;
-    }
+    // snakeTexture = LoadTexture("assets/SnakeBlock1.png");
+
     this->numRows = 20;
     this->numCols = 20;
 
@@ -37,9 +35,12 @@ Snake::Snake() {
 
 }
 
-Snake::~Snake(){    
-    UnloadTexture(snakeTexture);
-    UnloadTexture(foodTexture);
+Snake::~Snake(){   
+    UnloadTexture(headTexture);
+    UnloadTexture(bodyTexture);
+    UnloadTexture(tailTexture);
+    UnloadTexture(tail2Texture);
+    
 }
 
 void Snake::setMoney(int valueMoney){
@@ -117,6 +118,7 @@ void Snake::UpdateSnake() {
     // Оновлюємо позицію голови
     snakeRow = newRow;
     snakeCol = newCol;
+    DrawFood();
 }
 
 
@@ -158,15 +160,28 @@ void Snake::SnakeClear() {
 
 
 void Snake::SnakeDraw() {
-    DrawFood(foodTexture);
+    for (size_t i = 0; i < body.size(); i++) {
+    const SnakeSegment& segment = body[i];
 
-    for (const SnakeSegment& segment : body) {
-
-        DrawTexture(snakeTexture, segment.col * 30, segment.row * 30, WHITE);
-        grid[segment.row][segment.col] = 7;
+    if (i == 0) {
+        // Голова
+        DrawTexture(headTexture, segment.col * 30, segment.row * 30, WHITE);
+    } else if (i == body.size() - 1) {
+        // Хвіст
+        DrawTexture(tailTexture, segment.col * 30, segment.row * 30, WHITE);
+    } else if (i == body.size() - 2) {
+        // Хвіст2
+        DrawTexture(tail2Texture, segment.col * 30, segment.row * 30, WHITE);
+    } else {
+        // Тіло
+        DrawTexture(bodyTexture, segment.col * 30, segment.row * 30, WHITE);
     }
-    // Затримка після малювання всіх сегментів
-    std::this_thread::sleep_for(std::chrono::milliseconds(80));
+
+    grid[segment.row][segment.col] = 7;
+}
+
+    // // Затримка після малювання всіх сегментів
+    // std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
 
 
